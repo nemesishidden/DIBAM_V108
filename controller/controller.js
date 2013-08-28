@@ -512,7 +512,6 @@ var app = {
     },
 
     contactenos: function(){
-        console.log('contactenos');
         $.mobile.showPageLoadingMsg( "c", "Cargando...", false );
         if($('#mensajeContacto').val().trim().length >= 1){
             $.ajax({
@@ -526,11 +525,12 @@ var app = {
                 error : function (){ document.title='error'; }, 
                 success: function (data) {                
                     if(data.success){
-                        alert('Su mensaje ha sido enviado con exito.');
+                        //alert('Su mensaje ha sido enviado con exito.');
+                        alert(data.model.mensaje);
                         $.mobile.changePage( '#inicio', {transition: "slide"});
                     }else{
                         $.mobile.hidePageLoadingMsg();
-                        alert(data.model.error);
+                        alert(data.model.mensaje);
                         $.mobile.changePage( '#inicio', {transition: "slide"});
                     }
                 }
