@@ -509,5 +509,35 @@ var app = {
         }, function(tx){
             console.log('success sincronizaPresupuesto');            
         });
+    },
+
+    contactenos: function(){
+        console.log('contactenos');
+        $.mobile.showPageLoadingMsg( "c", "Cargando...", false );
+        if($('#mensajeContacto').val().trim().length >= 1){
+            $.ajax({
+                url: 'http://dibam-sel.opensoft.cl/OpenSEL/json/jsonContactenos.asp',
+                type: 'POST',
+                dataType: 'json',
+                data: {
+                   argUsuarioId: window.usuario.id,
+                   argMensaje: $('#mensajeContacto').val()
+                },
+                error : function (){ document.title='error'; }, 
+                success: function (data) {                
+                    if(data.success){
+                        alert('Su mensaje ha sido enviado con exito.');
+                        $.mobile.changePage( '#inicio', {transition: "slide"});
+                    }else{
+                        $.mobile.hidePageLoadingMsg();
+                        alert(data.model.error);
+                        $.mobile.changePage( '#inicio', {transition: "slide"});
+                    }
+                }
+            });
+        }else{
+            alert('Debe llenar el campo para poder enviar.');
+        }
+
     }
 };

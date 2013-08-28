@@ -64,7 +64,7 @@
                     <ul>
                         <li><a href="#login" data-icon="back">Salir</a></li>
                         <li><a href="#inicio" data-icon="home">Home</a></li>
-                        <!-- <li><a href="#contactenosPag" data-icon="grid">Contacto</a></li> -->
+                        <li><a href="#contactenosPag" data-icon="grid">Contacto</a></li>
                     </ul>
                 </div>
             </div>
@@ -108,6 +108,7 @@
                     <ul>
                         <li><a href="" data-rel="back" data-icon="back">Volver</a></li>
                         <li><a href="#inicio" data-icon="home">Home</a></li>
+                        <li><a href="#contactenosPag" data-icon="grid">Contacto</a></li>
                     </ul>
                 </div>
             </div>
@@ -123,13 +124,11 @@
             <div data-role="content" style="padding: 0px;">   
                 <div class="divResumen"></div>      
                 <form action="" method="get" lang="es" id="formListaSolPorEnviar">
-                    <!-- <fieldset id="listadoSolicitudesPorEnviar" data-role="controlgroup"></fieldset> -->
                     <ul id="listadoSolicitudesPorEnviar" data-role="listview" data-split-icon="edit" data-split-theme="d" data-inset="true"></ul>
-                    <!-- <span id="sinResultadoSolicitud"></span> -->
                 </form>
                 <center>
                     <input type="button" value="Eliminar" id="eliminarSolicitudes" data-inline="true"/>
-                    <input type="button" value="Enviar" id="enviarSolicitud" data-inline="true"/>                        
+                    <input type="button" value="Enviar" id="enviarSolicitud" data-inline="true"/>
                 </center>
             </div>
             <div data-role="footer" data-position="fixed" class="ui-bar-a-footer">
@@ -137,6 +136,7 @@
                     <ul>
                         <li><a href="" data-rel="back" data-icon="back">Volver</a></li>
                         <li><a href="#inicio" data-icon="home">Home</a></li>
+                        <li><a href="#contactenosPag" data-icon="grid">Contacto</a></li>
                     </ul>
                 </div>
             </div>
@@ -158,6 +158,7 @@
                     <ul>
                         <li><a href="#inicio" data-rel="back" data-icon="back">Volver</a></li>
                         <li><a href="#inicio" data-icon="home">Home</a></li>
+                        <li><a href="#contactenosPag" data-icon="grid">Contacto</a></li>
                     </ul>
                 </div>
             </div>
@@ -179,6 +180,7 @@
                     <ul>
                         <li><a href="" data-rel="back" data-icon="back">Volver</a></li>
                         <li><a href="#inicio" data-icon="home">Home</a></li>
+                        <li><a href="#contactenosPag" data-icon="grid">Contacto</a></li>
                     </ul>
                 </div>
             </div>
@@ -202,6 +204,7 @@
                     <ul>
                         <li><a href="" data-rel="back" data-icon="back">Volver</a></li>
                         <li><a href="#inicio" data-icon="home">Home</a></li>
+                        <li><a href="#contactenosPag" data-icon="grid">Contacto</a></li>
                     </ul>
                 </div>
             </div>
@@ -247,6 +250,7 @@
                     <ul>
                         <li><a href="" data-rel="back" data-icon="back">Volver</a></li>
                         <li><a href="#inicio" data-icon="home">Home</a></li>
+                        <li><a href="#contactenosPag" data-icon="grid">Contacto</a></li>
                     </ul>
                 </div>
             </div>
@@ -257,13 +261,15 @@
         <div data-role="page" id="contactenosPag">
             <div data-role="header" data-position="fixed">
                 <img src="style/img/barra_superior.jpg" width="100%">
-                <h1>Cont&acute;ctenos</h1>
+                <h1>Cont&aacute;ctenos</h1>
             </div>
             <div data-role="content" style="padding: 0px;">   
                 <div class="divResumen" ></div>      
-                <div data-role="fieldcontain">
-                    <label for="mensaje">Mensaje:</label>
-                    <textarea name="mensaje" id="mensaje" placeholder="Ingrerse su mensaje."></textarea>
+                <div data-role="fieldcontain" style="margin: 40px 15px 0px 15px;">
+                    <label for="mensajeContacto">Mensaje:</label>
+                    <textarea name="mensajeContacto" cols="40" rows="8" id="mensajeContacto" placeholder="Ingrerse su mensaje."></textarea>
+                    <center><a data-role="button" onClick="app.contactenos()" data-inline="true" data-icon="check">Enviar</a></center>
+                
                 </div>
             </div>
             <div data-role="footer" data-position="fixed" class="ui-bar-a-footer">
@@ -271,6 +277,7 @@
                     <ul>
                         <li><a href="" data-rel="back" data-icon="back">Volver</a></li>
                         <li><a href="#inicio" data-icon="home">Home</a></li>
+                        <li><a href="#contactenosPag" data-icon="grid">Contacto</a></li>
                     </ul>
                 </div>
             </div>
